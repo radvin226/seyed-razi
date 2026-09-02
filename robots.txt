@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# دامنه واقعی سایت را پس از ارسال آدرس، در Sitemap جایگزین می‌کنیم.
+# Sitemap: https://YOUR-DOMAIN.example/sitemap.xml
