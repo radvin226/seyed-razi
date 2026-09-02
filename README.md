@@ -1,10 +1,24 @@
-# مدرسه سید رضی — GitHub Pages
+# بک‌اند کامل مدرسه سید رضی
 
-این نسخه مخصوص GitHub Pages است و به Node.js/MySQL نیاز ندارد.
+این پوشه برای Render + PostgreSQL آماده است.
 
-- آدرس: https://radvin226.github.io/seyed-razi/
-- پنل مدیریت: https://radvin226.github.io/seyed-razi/#admin
-- نام کاربری: admin
-- رمز اولیه: 123456
+1. آن را در یک GitHub Repository جداگانه قرار دهید.
+2. در Render گزینه New -> Blueprint را بزنید.
+3. Repository را انتخاب کنید.
+4. `render.yaml` سرویس و دیتابیس را می‌سازد.
+5. `ADMIN_PASSWORD` را تعیین کنید.
+6. بعد از Deploy آدرس `https://...onrender.com` را بردارید.
+7. آن آدرس را در `github-pages/api-config.js` قرار دهید.
 
-توجه: در این نسخه، اطلاعات پنل مدیریت در LocalStorage همان مرورگر ذخیره می‌شود؛ بنابراین تغییرات فقط روی همان دستگاه/مرورگر دیده می‌شوند. برای مدیریت واقعی و مشترک بین همه کاربران، بک‌اند و دیتابیس آنلاین لازم است.
+API:
+- GET /api/health
+- GET /api/site
+- POST /api/admin/login
+- GET /api/admin/me
+- PUT /api/admin/site
+- PUT /api/admin/password
+
+نام کاربری اولیه: admin
+رمز اولیه: مقدار ADMIN_PASSWORD
+
+دقت: فایل `.env` و رمزهای واقعی را داخل GitHub قرار ندهید.
